@@ -16,8 +16,8 @@ def edit_distance(s1, s2, costs):
         distances.append([0] * (n2 + 1))
         transform_path.append(['*'] * (n2 + 1))
 
-    for i in range(0, n1 + 1):
-        for j in range(0, n2 + 1):
+    for i in range(n1 + 1):
+        for j in range(n2 + 1):
             if i == 0:  # distances[0][0] = 0
                 distances[i][j] = j * costs[INSERT]
                 transform_path[i][j] = 'i'
